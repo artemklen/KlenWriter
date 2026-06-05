@@ -1,5 +1,9 @@
 # KlenWriter
 
+[![Website](https://img.shields.io/badge/Website-klenwriter.arklen.ru-2563eb)](https://klenwriter.arklen.ru)
+[![GitHub](https://img.shields.io/badge/GitHub-artemklen%2FKlenWriter-111827)](https://github.com/artemklen/KlenWriter)
+[![Download](https://img.shields.io/badge/Download-ZIP-16a34a)](https://github.com/artemklen/KlenWriter/archive/refs/heads/main.zip)
+
 KlenWriter — лёгкий WordPress-плагин для комфортного чтения. Он добавляет на страницы записей и обычные страницы две аккуратные кнопки:
 
 - **Тёмный режим** — мягкая тёмная тема для чтения вечером и ночью.
@@ -31,6 +35,8 @@ KlenWriter — лёгкий WordPress-плагин для комфортного
 3. Перейдите в раздел **Плагины**.
 4. Активируйте **KlenWriter**.
 5. После активации откройте **Настройки → KlenWriter** и настройте внешний вид.
+
+Больше деталей и скриншоты доступны на сайте: <https://klenwriter.arklen.ru>
 
 ## Настройки
 
@@ -156,6 +162,10 @@ body.kw-distraction-mode
 
 **Артёмка Клён** — писатель.
 
+## Support
+
+For questions and suggestions, visit <https://klenwriter.arklen.ru> or open an issue on GitHub: <https://github.com/artemklen/KlenWriter/issues>.
+
 ## Лицензия
 
 GPLv2 or later.
@@ -195,6 +205,8 @@ The plugin is made for author websites, personal blogs, literary journals, and a
 3. Go to **Plugins**.
 4. Activate **KlenWriter**.
 5. After activation, go to **Settings → KlenWriter** and configure the plugin.
+
+More details and screenshots available at <https://klenwriter.arklen.ru>
 
 ## Settings
 
@@ -319,6 +331,10 @@ Current version: **1.0**
 ## Author
 
 **Artyomka Klen** — writer.
+
+## Support
+
+For questions and suggestions, visit <https://klenwriter.arklen.ru> or open an issue on GitHub: <https://github.com/artemklen/KlenWriter/issues>.
 
 ## License
 

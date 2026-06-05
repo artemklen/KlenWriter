@@ -2,6 +2,8 @@
 /**
  * Admin settings page.
  *
+ * Plugin site: https://klenwriter.arklen.ru
+ *
  * @package KlenWriter
  */
 

@@ -1,13 +1,16 @@
 <?php
 /**
  * Plugin Name: KlenWriter
- * Description: Adds dark mode and distraction-free reading controls for single posts and pages.
+ * Plugin URI:  https://klenwriter.arklen.ru
+ * Description: Adds dark mode and distraction-free reading controls for single posts and pages. More info: https://klenwriter.arklen.ru
  * Version:     1.0
  * Author:      Артёмка Клён
+ * Author URI:  https://arklen.ru
  * Text Domain: klenwriter
  * Domain Path: /languages
  * Requires at least: 5.8
  * Requires PHP: 7.4
+ * Update URI:  https://klenwriter.arklen.ru
  *
  * @package KlenWriter
  */
@@ -22,6 +25,8 @@ define( 'KLENWRITER_PATH', plugin_dir_path( __FILE__ ) );
 define( 'KLENWRITER_URL', plugin_dir_url( __FILE__ ) );
 define( 'KLENWRITER_OPTION_NAME', 'klenwriter_options' );
 define( 'KLENWRITER_ACTIVATION_NOTICE', 'klenwriter_activation_notice' );
+define( 'KLENWRITER_PLUGIN_SITE', 'https://klenwriter.arklen.ru' );
+define( 'KLENWRITER_GITHUB_URL', 'https://github.com/artemklen/KlenWriter' );
 
 if ( ! class_exists( 'KlenWriter' ) ) {
 	/**
@@ -70,6 +75,7 @@ if ( ! class_exists( 'KlenWriter' ) ) {
 			add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 			add_action( 'init', array( $this, 'init' ) );
 			add_action( 'admin_notices', array( $this, 'show_activation_notice' ) );
+			add_filter( 'plugin_action_links_' . plugin_basename( KLENWRITER_FILE ), array( $this, 'add_plugin_action_links' ) );
 		}
 
 		/**
@@ -96,6 +102,29 @@ if ( ! class_exists( 'KlenWriter' ) ) {
 
 			$this->settings = new KlenWriter_Settings();
 			$this->frontend = new KlenWriter_Frontend();
+		}
+
+		/**
+		 * Adds quick links to the plugin row in the WordPress plugins screen.
+		 *
+		 * @param array<int|string, string> $links Existing plugin action links.
+		 * @return array<int|string, string>
+		 */
+		public function add_plugin_action_links( $links ) {
+			$custom_links = array(
+				'settings'    => sprintf(
+					'<a href="%s">%s</a>',
+					esc_url( admin_url( 'options-general.php?page=klenwriter' ) ),
+					esc_html__( 'Settings', 'klenwriter' )
+				),
+				'plugin_site' => sprintf(
+					'<a href="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+					esc_url( KLENWRITER_PLUGIN_SITE ),
+					esc_html__( 'Visit plugin site', 'klenwriter' )
+				),
+			);
+
+			return array_merge( $custom_links, $links );
 		}
 
 		/**

@@ -2,6 +2,8 @@
 /**
  * Frontend output and assets.
  *
+ * Plugin site: https://klenwriter.arklen.ru
+ *
  * @package KlenWriter
  */
 
