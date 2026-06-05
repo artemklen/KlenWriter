@@ -1,0 +1,40 @@
+.kw-admin-wrap {
+	max-width: 900px;
+}
+
+.kw-admin-wrap .form-table th {
+	width: 230px;
+}
+
+.kw-logo-field {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+}
+
+.kw-logo-preview {
+	width: 72px;
+	height: 72px;
+	object-fit: contain;
+	border: 1px solid #c3c4c7;
+	border-radius: 8px;
+	background: #ffffff;
+}
+
+.kw-field-line {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.kw-field-line span {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: 600;
+}
+
+.kw-reset-form {
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #dcdcde;
+}

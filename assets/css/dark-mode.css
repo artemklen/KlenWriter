@@ -1,0 +1,149 @@
+body,
+body * {
+	transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+body.kw-dark-mode {
+	background: var(--kw-dark-color, #111827);
+	color: var(--kw-light-color, #e5e7eb);
+}
+
+body.kw-dark-mode .site-content,
+body.kw-dark-mode .kw-dark-background {
+	background: var(--kw-dark-color, #111827) !important;
+	color: var(--kw-light-color, #e5e7eb) !important;
+}
+
+body.kw-dark-mode a {
+	color: #93c5fd;
+}
+
+body.kw-dark-mode input,
+body.kw-dark-mode textarea,
+body.kw-dark-mode select,
+body.kw-dark-mode button {
+	color-scheme: dark;
+}
+
+body.kw-dark-mode article,
+body.kw-dark-mode main,
+body.kw-dark-mode .site,
+body.kw-dark-mode .entry-content,
+body.kw-dark-mode .content-area {
+	background-color: transparent;
+	color: inherit;
+}
+
+body.kw-dark-mode blockquote,
+body.kw-dark-mode pre,
+body.kw-dark-mode code {
+	background-color: rgba(255, 255, 255, 0.08);
+	color: #f9fafb;
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.kw-controls {
+	position: fixed;
+	bottom: 18px;
+	z-index: 9998;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: min(230px, calc(100vw - 32px));
+	align-items: stretch;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.kw-controls-position-right {
+	right: 18px;
+	left: auto;
+}
+
+.kw-controls-position-left {
+	right: auto;
+	left: 18px;
+}
+
+.kw-author-logo {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 2px;
+	object-fit: contain;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18);
+}
+
+.kw-toggle {
+	display: inline-flex;
+	min-height: 42px;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	padding: 9px 12px;
+	border: 1px solid rgba(15, 23, 42, 0.18);
+	border-radius: 8px;
+	background: #ffffff;
+	color: #111827;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.16);
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.25;
+	text-align: center;
+}
+
+.kw-toggle:hover,
+.kw-toggle:focus {
+	border-color: #2563eb;
+	outline: none;
+}
+
+.kw-toggle:focus-visible {
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.32);
+}
+
+.kw-toggle.is-active {
+	background: #2563eb;
+	border-color: #2563eb;
+	color: #ffffff;
+}
+
+.kw-toggle-icon {
+	flex: 0 0 auto;
+	font-size: 16px;
+	line-height: 1;
+}
+
+.kw-toggle-text {
+	overflow-wrap: anywhere;
+}
+
+body.kw-dark-mode .kw-toggle {
+	background: #1f2937;
+	border-color: rgba(255, 255, 255, 0.2);
+	color: #f9fafb;
+}
+
+body.kw-dark-mode .kw-toggle.is-active {
+	background: #60a5fa;
+	border-color: #60a5fa;
+	color: #0f172a;
+}
+
+@media (max-width: 600px) {
+	.kw-controls {
+		bottom: 12px;
+		width: min(210px, calc(100vw - 24px));
+	}
+
+	.kw-controls-position-right {
+		right: 12px;
+		left: auto;
+	}
+
+	.kw-controls-position-left {
+		right: auto;
+		left: 12px;
+	}
+}
